@@ -17,6 +17,8 @@ Add `'aldryn_quote'` to your `INSTALLED_APPS`:
 ```python
 # settings.py
 INSTALLED_APPS += [
-    'aldryn_quote'
+    'aldryn_quote',
 ]
 ```
+
+Run `python manage.py migrate aldryn_quote`.

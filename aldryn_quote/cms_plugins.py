@@ -7,6 +7,7 @@ class QuotePlugin(CMSPluginBase):
     model = Quote
     name = _('Quote')
     render_template = 'aldryn_quote/quote.html'
+    fields = ('content', 'footer', 'url',)
 
     def render(self, context, instance, placeholder):
         quote = instance.content

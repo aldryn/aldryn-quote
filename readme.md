@@ -21,4 +21,8 @@ INSTALLED_APPS += [
 ]
 ```
 
-Run `python manage.py migrate aldryn_quote`.
+Make sure `'south'` is installed. Run the following commands in the given order:
+
+```bash
+python manage.py migrate aldryn_quote
+```

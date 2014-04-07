@@ -1,4 +1,6 @@
 include readme.md
 include LICENSE.txt
 include app.json
-recursive-include aldryn_quote/templates/*
+recursive-include aldryn_quote/templates *
+recursive-include aldryn_quote/locale *
+recursive-exclude * *.pyc

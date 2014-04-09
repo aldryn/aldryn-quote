@@ -2,17 +2,19 @@ from django.utils.translation import ugettext_lazy as _
 from cms.plugin_pool import plugin_pool
 from cms.plugin_base import CMSPluginBase
 from aldryn_quote.models import Quote
+from .forms import QuotePluginForm
 
 class QuotePlugin(CMSPluginBase):
+    render_template = False
     model = Quote
     name = _('Quote')
-    render_template = 'aldryn_quote/quote.html'
-    fields = ('content', 'footer', 'url', 'target',)
+    form = QuotePluginForm
+    fields = ('style', 'content', 'footer', 'url', 'target',)
 
     def render(self, context, instance, placeholder):
-        quote = instance.content
+        self.render_template = 'aldryn_quote/plugins/%s/quote.html' % instance.style
         context.update({
-            'quote': quote,
+            'quote': instance.content,
             'footer': instance.footer,
             'url': instance.url,
             'target': instance.target,

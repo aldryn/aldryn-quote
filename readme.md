@@ -12,7 +12,7 @@ Installation
     pip install -e git+https://github.com/philipp-x/aldryn-quote#egg=aldryn-quote
     ```
 
-2. Add `'aldryn_quote'` to your `INSTALLED_APPS`:
+2. Add `aldryn_quote` to your `INSTALLED_APPS`:
 
     ```python
     # settings.py
@@ -21,7 +21,7 @@ Installation
     ]
     ```
 
-3. Make sure `'south'` is installed. Run the following commands in the given order:
+3. Make sure `south` is installed. Run the following commands in the given order:
 
     ```bash
     python manage.py migrate aldryn_quote
@@ -30,11 +30,11 @@ Installation
 Additional style choices
 ------------------------
 
-1. Within the `'templates/aldryn_quote/plugins'` folder, create a subfolder with a name of your choice.
+1. Within the `templates/aldryn_quote/plugins` folder, create a subfolder with a name of your choice.
 
-2. Make sure your template is called `'quote.html'` and copy it to the subfolder created in step 1.
+2. Make sure your template is called `quote.html` and copy it to the subfolder created in step 1.
 
-3. Add the name of your subfolder to a tuple called `'QUOTE_STYLES'`:
+3. Add the name of your subfolder to a tuple called `QUOTE_STYLES`:
 
     ```python
     # settings.py

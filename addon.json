@@ -1,7 +1,6 @@
 {
-    "name": "Quote",
+    "name": "Aldryn Quote",
     "description": "Easy to use quote plugin for Aldryn and django CMS.",
-    "version": "1.0.5",
     "url": "https://github.com/philipp-x/aldryn-quote",
     "package-name": "aldryn-quote",
     "installed-apps": [
